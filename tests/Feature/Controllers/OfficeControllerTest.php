@@ -133,6 +133,6 @@ class OfficeControllerTest extends TestCase
 
         $response->assertRedirect(route('offices.index'));
 
-        $this->assertDeleted($office);
+        $this->assertSoftDeleted($office);
     }
 }

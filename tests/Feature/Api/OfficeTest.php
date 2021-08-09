@@ -87,7 +87,7 @@ class OfficeTest extends TestCase
 
         $response = $this->deleteJson(route('api.offices.destroy', $office));
 
-        $this->assertDeleted($office);
+        $this->assertSoftDeleted($office);
 
         $response->assertNoContent();
     }

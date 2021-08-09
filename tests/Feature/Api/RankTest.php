@@ -93,7 +93,7 @@ class RankTest extends TestCase
 
         $response = $this->deleteJson(route('api.ranks.destroy', $rank));
 
-        $this->assertDeleted($rank);
+        $this->assertSoftDeleted($rank);
 
         $response->assertNoContent();
     }

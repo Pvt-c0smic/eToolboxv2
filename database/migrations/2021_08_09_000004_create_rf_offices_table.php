@@ -19,6 +19,7 @@ class CreateRfOfficesTable extends Migration
             $table->string('description');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

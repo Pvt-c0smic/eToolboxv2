@@ -92,7 +92,7 @@ class PersonnelTypeTest extends TestCase
             route('api.personnel-types.destroy', $personnelType)
         );
 
-        $this->assertDeleted($personnelType);
+        $this->assertSoftDeleted($personnelType);
 
         $response->assertNoContent();
     }

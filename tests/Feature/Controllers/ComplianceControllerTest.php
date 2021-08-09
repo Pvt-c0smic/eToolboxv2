@@ -144,6 +144,6 @@ class ComplianceControllerTest extends TestCase
 
         $response->assertRedirect(route('compliances.index'));
 
-        $this->assertDeleted($compliance);
+        $this->assertSoftDeleted($compliance);
     }
 }

@@ -90,7 +90,7 @@ class StatusTest extends TestCase
 
         $response = $this->deleteJson(route('api.statuses.destroy', $status));
 
-        $this->assertDeleted($status);
+        $this->assertSoftDeleted($status);
 
         $response->assertNoContent();
     }

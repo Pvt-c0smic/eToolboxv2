@@ -20,6 +20,7 @@ class CreateRfRanksTable extends Migration
             $table->foreignId('personnel_type_id');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

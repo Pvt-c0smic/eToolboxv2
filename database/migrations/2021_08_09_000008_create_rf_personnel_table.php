@@ -28,6 +28,7 @@ class CreateRfPersonnelTable extends Migration
             $table->string('designation');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

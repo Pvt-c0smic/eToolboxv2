@@ -15,6 +15,12 @@ class PermissionsSeeder extends Seeder
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
         // Create default permissions
+        Permission::create(['name' => 'list offices']);
+        Permission::create(['name' => 'view offices']);
+        Permission::create(['name' => 'create offices']);
+        Permission::create(['name' => 'update offices']);
+        Permission::create(['name' => 'delete offices']);
+
         Permission::create(['name' => 'list allbos']);
         Permission::create(['name' => 'view allbos']);
         Permission::create(['name' => 'create allbos']);
@@ -27,29 +33,11 @@ class PermissionsSeeder extends Seeder
         Permission::create(['name' => 'update personneltypes']);
         Permission::create(['name' => 'delete personneltypes']);
 
-        Permission::create(['name' => 'list offices']);
-        Permission::create(['name' => 'view offices']);
-        Permission::create(['name' => 'create offices']);
-        Permission::create(['name' => 'update offices']);
-        Permission::create(['name' => 'delete offices']);
-
-        Permission::create(['name' => 'list statuses']);
-        Permission::create(['name' => 'view statuses']);
-        Permission::create(['name' => 'create statuses']);
-        Permission::create(['name' => 'update statuses']);
-        Permission::create(['name' => 'delete statuses']);
-
         Permission::create(['name' => 'list ranks']);
         Permission::create(['name' => 'view ranks']);
         Permission::create(['name' => 'create ranks']);
         Permission::create(['name' => 'update ranks']);
         Permission::create(['name' => 'delete ranks']);
-
-        Permission::create(['name' => 'list compliances']);
-        Permission::create(['name' => 'view compliances']);
-        Permission::create(['name' => 'create compliances']);
-        Permission::create(['name' => 'update compliances']);
-        Permission::create(['name' => 'delete compliances']);
 
         Permission::create(['name' => 'list allpersonnel']);
         Permission::create(['name' => 'view allpersonnel']);
@@ -62,6 +50,18 @@ class PermissionsSeeder extends Seeder
         Permission::create(['name' => 'create complianceactions']);
         Permission::create(['name' => 'update complianceactions']);
         Permission::create(['name' => 'delete complianceactions']);
+
+        Permission::create(['name' => 'list compliances']);
+        Permission::create(['name' => 'view compliances']);
+        Permission::create(['name' => 'create compliances']);
+        Permission::create(['name' => 'update compliances']);
+        Permission::create(['name' => 'delete compliances']);
+
+        Permission::create(['name' => 'list statuses']);
+        Permission::create(['name' => 'view statuses']);
+        Permission::create(['name' => 'create statuses']);
+        Permission::create(['name' => 'update statuses']);
+        Permission::create(['name' => 'delete statuses']);
 
         // Create user role and assign existing permissions
         $currentPermissions = Permission::all();

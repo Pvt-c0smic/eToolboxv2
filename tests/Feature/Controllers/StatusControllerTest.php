@@ -133,6 +133,6 @@ class StatusControllerTest extends TestCase
 
         $response->assertRedirect(route('statuses.index'));
 
-        $this->assertDeleted($status);
+        $this->assertSoftDeleted($status);
     }
 }

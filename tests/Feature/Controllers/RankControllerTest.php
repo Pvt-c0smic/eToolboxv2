@@ -139,6 +139,6 @@ class RankControllerTest extends TestCase
 
         $response->assertRedirect(route('ranks.index'));
 
-        $this->assertDeleted($rank);
+        $this->assertSoftDeleted($rank);
     }
 }

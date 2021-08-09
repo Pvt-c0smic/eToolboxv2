@@ -22,14 +22,14 @@ class DatabaseSeeder extends Seeder
             ]);
         $this->call(PermissionsSeeder::class);
 
-        $this->call(BosSeeder::class);
-        $this->call(PersonnelTypeSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(OfficeSeeder::class);
-        $this->call(StatusSeeder::class);
+        $this->call(BosSeeder::class);
+        $this->call(PersonnelTypeSeeder::class);
         $this->call(RankSeeder::class);
-        $this->call(ComplianceSeeder::class);
         $this->call(PersonnelSeeder::class);
         $this->call(ComplianceActionSeeder::class);
+        $this->call(ComplianceSeeder::class);
+        $this->call(StatusSeeder::class);
     }
 }

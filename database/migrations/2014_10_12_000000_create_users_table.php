@@ -21,8 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('remember_token', 100)->nullable();
             $table->string('afpsn')->nullable();
+            $table->string('photo')->nullable();
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

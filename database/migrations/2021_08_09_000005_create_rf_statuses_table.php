@@ -19,6 +19,7 @@ class CreateRfStatusesTable extends Migration
             $table->string('description');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -87,7 +87,7 @@ class BosTest extends TestCase
 
         $response = $this->deleteJson(route('api.all-bos.destroy', $bos));
 
-        $this->assertDeleted($bos);
+        $this->assertSoftDeleted($bos);
 
         $response->assertNoContent();
     }

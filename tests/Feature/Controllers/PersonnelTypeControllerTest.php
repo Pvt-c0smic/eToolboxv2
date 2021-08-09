@@ -142,6 +142,6 @@ class PersonnelTypeControllerTest extends TestCase
 
         $response->assertRedirect(route('personnel-types.index'));
 
-        $this->assertDeleted($personnelType);
+        $this->assertSoftDeleted($personnelType);
     }
 }

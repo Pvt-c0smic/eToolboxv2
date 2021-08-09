@@ -22,6 +22,7 @@ class CreateTrComplianceActionsTable extends Migration
             $table->date('updated_date');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

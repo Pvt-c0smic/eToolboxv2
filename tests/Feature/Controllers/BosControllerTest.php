@@ -133,6 +133,6 @@ class BosControllerTest extends TestCase
 
         $response->assertRedirect(route('all-bos.index'));
 
-        $this->assertDeleted($bos);
+        $this->assertSoftDeleted($bos);
     }
 }

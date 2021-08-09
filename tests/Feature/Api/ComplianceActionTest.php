@@ -103,7 +103,7 @@ class ComplianceActionTest extends TestCase
             route('api.compliance-actions.destroy', $complianceAction)
         );
 
-        $this->assertDeleted($complianceAction);
+        $this->assertSoftDeleted($complianceAction);
 
         $response->assertNoContent();
     }

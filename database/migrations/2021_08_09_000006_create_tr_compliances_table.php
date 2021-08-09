@@ -22,6 +22,7 @@ class CreateTrCompliancesTable extends Migration
             $table->foreignId('status_id');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
