@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\BosController;
 use App\Http\Controllers\Api\RankController;
+use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\RoleController;
 use App\Http\Controllers\Api\OfficeController;
@@ -134,4 +135,6 @@ Route::name('api.')
             'compliance-actions',
             ComplianceActionController::class
         );
+
+        Route::apiResource('users', UserController::class);
     });

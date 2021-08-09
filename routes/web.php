@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BosController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RankController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\StatusController;
@@ -98,4 +99,5 @@ Route::prefix('/')
             'compliance-actions',
             ComplianceActionController::class
         );
+        Route::resource('users', UserController::class);
     });

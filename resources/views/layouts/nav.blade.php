@@ -46,6 +46,9 @@
                             @can('view-any', App\Models\ComplianceAction::class)
                             <a class="dropdown-item" href="{{ route('compliance-actions.index') }}">Compliance Actions</a>
                             @endcan
+                            @can('view-any', App\Models\User::class)
+                            <a class="dropdown-item" href="{{ route('users.index') }}">Users</a>
+                            @endcan
                         </div>
 
                     </li>
